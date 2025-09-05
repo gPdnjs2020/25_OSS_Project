@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer OSS Sample Page</title>
+  <style>
+    body {
+      font-family: "Courier New", monospace;
+      margin: 0;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom: 2px solid #555;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #555;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #fff;
+      border-left: 5px solid #888;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+    pre {
+      background: #1b1b1b;
+      color: #f5f5f5;
+      padding: 18px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #555;
+    }
+    p, li {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💻 Developer page </h1>
+  <p>C / C++ / Java / Python / JavaScript Sample Codes</p>
+</header>
+
+<nav>
+  <a href="#c">C</a>
+  <a href="#cpp">C++</a>
+  <a href="#java">Java</a>
+  <a href="#python">Python</a>
+  <a href="#js">JavaScript</a>
+</nav>
+
+<!-- C Section -->
+<section id="c">
+  <div class="card">
+    <h2>🔹 C - File I/O Example</h2>
+    <p><b>About C:</b> C는 시스템 프로그래밍과 임베디드 개발에 강력하며, 저수준 메모리 제어가 가능합니다. 빠른 성능과 효율적인 메모리 사용이 필요할 때 주로 사용됩니다.</p>
+    <p>This example demonstrates reading and writing students' scores to a file using C's standard I/O functions.</p>
+    <pre>
+#include &lt;stdio.h&gt;
+
+struct Student {
+    char name[20];
+    int score;
+};
+
+int main() {
+    struct Student s = {"Alice", 90};
+    FILE *fp = fopen("students.txt", "w");
+    fprintf(fp, "%s %d\n", s.name, s.score);
+    fclose(fp);
+    printf("Saved &amp; read from file complete.\n");
+    return 0;
+}
+    </pre>
+    <p>Run: <code>gcc student.c -o student &amp;&amp; ./student</code></p>
+  </div>
+</section>
+
+<!-- C++ Section -->
+<section id="cpp">
+  <div class="card">
+    <h2>🔹 C++ - Class &amp; Vector Example</h2>
+    <p><b>About C++:</b> C++는 객체지향 프로그래밍(OOP)과 C 기반 성능을 모두 갖춘 언어입니다. 대규모 프로젝트나 게임, 그래픽, 시스템 소프트웨어에 적합합니다.</p>
+    <p>This example demonstrates using a vector of Student objects and class methods in C++.</p>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+class Student {
+    string name;
+    int score;
+public:
+    Student(string n, int s) : name(n), score(s) {}
+    void show() { cout &lt;&lt; name &lt;&lt; " : " &lt;&lt; score &lt;&lt; endl; }
+};
+
+int main() {
+    vector&lt;Student&gt; students = {Student("Alice",90), Student("Bob",85)};
+    for (auto &s : students) s.show();
+    return 0;
+}
+    </pre>
+    <p>Run: <code>g++ student.cpp -o student &amp;&amp; ./student</code></p>
+  </div>
+</section>
+
+<!-- Java Section -->
+<section id="java">
+  <div class="card">
+    <h2>🔹 Java - HashMap Todo List</h2>
+    <p><b>About Java:</b> Java는 플랫폼 독립적인 객체지향 언어로, 모바일, 웹, 서버 등 다양한 환경에서 사용됩니다. JVM 덕분에 한 번 작성하면 어디서든 실행 가능합니다.</p>
+    <p>This example shows how to use a HashMap to manage a simple todo list in Java.</p>
+    <pre>
+import java.util.*;
+
+public class TodoApp {
+    public static void main(String[] args) {
+        HashMap&lt;Integer,String&gt; todos = new HashMap&lt;&gt;();
+        todos.put(1,"Finish homework");
+        todos.put(2,"Review C++ code");
+        for(int key : todos.keySet()) {
+            System.out.println(key + ". " + todos.get(key));
+        }
+    }
+}
+    </pre>
+    <p>Run: <code>javac TodoApp.java &amp;&amp; java TodoApp</code></p>
+  </div>
+</section>
+
+<!-- Python Section -->
+<section id="python">
+  <div class="card">
+    <h2>🔹 Python - Simple Calculator</h2>
+    <p><b>About Python:</b> Python은 문법이 간단하고 배우기 쉬운 고급 언어입니다. 데이터 분석, 웹 개발, AI/머신러닝, 스크립팅 등 다용도로 사용됩니다.</p>
+    <p>This example demonstrates a simple calculator function in Python.</p>
+    <pre>
+# Python 3 Example
+def add(a,b):
+    return a+b
+
+def main():
+    print("2 + 3 =", add(2,3))
+
+if __name__ == "__main__":
+    main()
+    </pre>
+    <p>Run: <code>python3 calculator.py</code></p>
+  </div>
+</section>
+
