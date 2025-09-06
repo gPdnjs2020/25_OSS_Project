@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header h3 {
+            font-weight: 300;
+            font-size: 1.5rem;
+            margin: 50;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        body {
+            background-color: #fefefe;
+            margin: 1% auto;
+            padding: 40px 24px 24px;
+            border-radius: 12px;
+            width: 1000px;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-weight: normal;
+        }
+
+        head {
+            margin-bottom: 20px;
+
+        }
+
+        head h3 {
+            font-weight: normal;
+        }
+
+        #head {
+            margin-bottom: 20px;
+            font-size: 130%;
+            line-height: 30px ;
+            max-width: 660px;
+        }
+
+        #head a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #0d6efd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        #head a:hover {
+            background-color: #084298;
+        }
+
+        #head h1 {
+            font-weight: 300;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #starter,
+        #guides {
+            border-radius: 4px;
+            padding: 10px;
+            width: 50%;
+            font-size: 100%;
+            line-height: 25px;
+            font-weight: normal;
+        }
+
+        #starter h2,
+        #guides h2 {
+            font-weight: 300;
+            font-size: 2.2rem;
+        }
+
+
+        .row-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        hr.divider {
+            border: none;
+            border-top: 1px solid #ccc;
+            width: 20%;
+            margin: 20px;
+        }
+
+        ul {
+            list-style: disc inside;
+            padding-left: 1rem;
+        }
+
+        ul li a {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+
+        ul li a:hover {
+            text-decoration: none;
+        }
+
+        #list li::marker {
+        content: "⇒ ";
+        font-weight: bold;
+    }
+
+        #footer {
+            text-align: left;
+            padding: 1rem 0;
+            color: black;
+            font-size: 0.9rem;
+            font-weight: normal;
+            margin-top: auto;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+<body>
+    <div>
+        <header>
+            <h3>Starter template</h3>
+        </header>
+    </div>
+
+    <main>
+        <div id="head">
+            <h1>Get started with Bootstrap</h1>
+            <p>
+                Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones
+                example
+                featuring some basic HTML and helpful links. Download all our examples to get started.
+            </p>
+            <a href="down.html">
+                Download examples
+            </a>
+        </div>
+
+        <hr class="divider">
+
+        <div class="row-container">
+            <div id="starter">
+                <h2>Starter projects</h2>
+                <p>
+                    Ready to go beyond the starter template? Check out these open source projects that you can quickly
+                    duplicate to a new GitHub repository.
+                </p>
+                <ul id="list">
+                    <li><a href="npms.html">Bootstrap npm starter</a></li>
+                    <li><a href="parcels.html">Bootstrap Parcel starter</a></li>
+                    <li><a href="vites.html">Bootstrap Vite starter</a></li>
+                    <li><a href="webpacks.html">Bootstrap Webpack starter</a></li>
+                </ul>
+            </div>
+
+            <div id="guides">
+                <h2>Guides</h2>
+                <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+                <ul id="list">
+                    <li><a href="startg.html"> quick start guide</a></li>
+                    <li><a href="webpackg.html">Bootstrap Webpack guide</a></li>
+                    <li><a href="parcelg.html">Bootstrap Parcel guide</a></li>
+                    <li><a href="viteg.html">Bootstrap Vite guide</a></li>
+                    <li><a href="contribute.html">Contributing to Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer">
+            Created by the Bootstrap team · © 2025
+        </div>
+    </main>
+</body>
+
+</html>

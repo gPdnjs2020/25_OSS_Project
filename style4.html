@@ -8,6 +8,7 @@
         line-height: 26px;
         background-color: #000000;
     }
+
     #top {
         color: #84c754;
         padding: 15px;
@@ -16,6 +17,40 @@
     #maincontainer {
         color: #84c754;
         padding: 10px;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: #84c754;
+    }
+
+    #menulist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menulist li::marker {
+        content: "• ";
+        color: #84c754;
+        font-weight: bold;
+    }
+
+    .menuitem {
+        color: #84c754;
+        cursor: pointer;
+    }
+
+    .menuitem:nth-child(4) {
+        color: white;
+        font-weight: bold;
+    }
+
+    .menuitem:hover {
+        color: #ffffff;
     }
 
     #right {
@@ -29,6 +64,16 @@
         width: 320px;
         font-size: 80%;
         line-height: 20px;
+    }
+
+    #footer {
+        color: white;
+        border: 1px solid white;
+        border-radius: 4px;
+        padding: 4px;
+        text-align: center;
+        font-size: 70%;
+        line-height: 14px;
     }
 </style>
 
@@ -45,11 +90,25 @@
     </div>
     <div id="maincontainer">
         <ul id="left">
-            <li>Stylesheet 1</li>
-            <li>Stylesheet 2</li>
-            <li>Stylesheet 3</li>
-            <li>Stylesheet 4</li>
-            <li>No Stylesheet</li>
+            <div id="maincontainer">
+                <ul id="menulist">
+                    <li class="menuitem" onclick="reStyle(0)">
+                        Stylesheet 1
+                    </li>
+                    <li class="menuitem" onclick="reStyle(1)">
+                        Stylesheet 2
+                    </li>
+                    <li class="menuitem" onclick="reStyle(2)">
+                        Stylesheet 3
+                    </li>
+                    <li class="menuitem" onclick="reStyle(3)">
+                        Stylesheet 4
+                    </li>
+                    <li class="menuitem" onclick="noStyles()">
+                        no Stylesheet
+                    </li>
+                </ul>
+            </div>
         </ul>
         <div id="contents">
             <h1>Same Page Different Stylesheets </h1>
